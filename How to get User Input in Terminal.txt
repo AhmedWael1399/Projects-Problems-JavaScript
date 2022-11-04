@@ -1,0 +1,6 @@
+*To get user input in terminal in VS code without an HTML file*
+1- Open a new terminal in the desired project
+2- Type the following:
+->(npm init) and then keep press enter until it finishes
+->npm install prompt-sync
+3- After that type this line in your code: const prompt = require("prompt-sync")();
