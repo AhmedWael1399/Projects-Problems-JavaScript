@@ -9,8 +9,8 @@ let number2;
 
 for (let i = 0; i < size; i++) {
     let value = prompt(`Enter value #${i + 1}: `);
-    intValue = parseInt(value);
-    numberArray.push(intValue);
+    floatValue = parseFloat(value);
+    numberArray.push(floatValue);
 }
 
 function swapVariables(arr, index1, index2) {
@@ -20,8 +20,8 @@ function swapVariables(arr, index1, index2) {
     arr[index2] = temp;
 }
 
-number1 = parseInt(prompt("Enter the first number to be swapped: "));
-number2 = parseInt(prompt("Enter the second number to be swapped: "));
+number1 = parseFloat(prompt("Enter the first number to be swapped: "));
+number2 = parseFloat(prompt("Enter the second number to be swapped: "));
 
 if (numberArray.includes(number1) && numberArray.includes(number2)) {
 
@@ -29,4 +29,4 @@ if (numberArray.includes(number1) && numberArray.includes(number2)) {
     console.log(numberArray);
 }
 else
-    console.log("Please enter a valid input 😒");
+    console.log("Please enter a valid input 😒😠");
