@@ -3,7 +3,7 @@ const prompt = require("prompt-sync")();
 
 const numberArray = [];
 const size = prompt("Enter the size of the array: ");
-let intValue;
+let floatValue;
 let number1;
 let number2;
 
@@ -29,4 +29,4 @@ if (numberArray.includes(number1) && numberArray.includes(number2)) {
     console.log(numberArray);
 }
 else
-    console.log("Please enter a valid input 😒😠");
+    console.log("Please enter a valid input 😒");
