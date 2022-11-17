@@ -7,8 +7,7 @@ let intValue;
 
 for (let i = 0; i < dataSize; i++) {
 
-    let value = prompt(`Data Entry #${i + 1}: `)
-    intValue = parseInt(value);
+    intValue = parseInt(prompt(`Data Entry #${i + 1}: `))
     data.push(intValue);
 }
 
