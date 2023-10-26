@@ -1,20 +1,21 @@
 function addBinary(a, b) {
-    let numArray1 = a.split("");
-    let numArray2 = b.split("");
-    let sum = 0;
-    let carry = 0;
-    let temp;
-    if (numArray1.length > numArray2.length) {
-        for (let i = numArray1.length - 1; i > 0; i--) {
-            for (let j = numArray2.length - 1; j > 0; j--) {
-                if (numArray1[i] === numArray2[j] === "1") {
-                    temp = 0;
-                    carry = 1;
-                }
-            }
+    let result = "",
+        carry = 0;
+    while (a || b || carry) {
+        let sum = +a.slice(-1) + +b.slice(-1) + carry
+        if (sum > 1) {
+            result = sum % 2 + result
+            carry = 1
         }
-
+        else {
+            result = sum + result
+            carry = 0
+        }
+        a = a.slice(0, -1)
+        b = b.slice(0, -1)
     }
-    const firstNumber = "11";
-    const secondNumber = "1";
-    console.log(addBinary(firstNumber, secondNumber))
+    return result
+}
+const firstNumber = "1100",
+    secondNumber = "101";
+console.log(addBinary(firstNumber, secondNumber))
